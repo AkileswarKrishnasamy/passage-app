@@ -7,7 +7,7 @@ load_dotenv()
 
 
 SQL_DB_URL = f"{os.getenv('DB_URL')}"
-
+print(f"--- DEBUG: SQL_DB_URL from Render env: '{SQL_DB_URL}' ---")
 engine = create_engine(SQL_DB_URL) 
 session_local = sessionmaker(autocommit = False, autoflush= False, bind=engine)
 
